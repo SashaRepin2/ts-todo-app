@@ -1,5 +1,6 @@
 # Description
 Todos App ( React + TS + MobX + MUI + ... )
+For install packages `npm i`
 
 # Getting Started with Create React App
 
