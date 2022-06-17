@@ -1,40 +1,30 @@
-import { observer } from "mobx-react-lite";
-import TodosStore from "../stores/TodosStore";
+import React from 'react';
+import { observer } from 'mobx-react-lite';
+import { TodosList } from '../components/TodosList/TodosList';
+import { TodoModal } from '../components/TodoModal/TodoModal';
 
-import React, { FormEvent, useState } from "react";
-import { Complete, ITodo } from "../interfaces/Todo";
+import { IconButton } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+export const Home: React.FC = observer(() => {
+	const [isOpenModal, setIsOpenModal] = React.useState<boolean>(false);
 
-export const Home = observer(() => {
-  const [inputValue, setInputValue] = useState<string>("");
-
-  const onSubmitHandler = (e: FormEvent) => {
-    e.preventDefault();
-    const todo: ITodo = {
-      id: Math.random(),
-      title: inputValue,
-      complete: Complete.UNCOMPLETE,
-    };
-
-    TodosStore.addTodo(todo);
-  };
-
-  return (
-    <>
-      <form>
-        <input
-          name={"title-todo"}
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <button type={"submit"} onClick={(e) => onSubmitHandler(e)}>
-          Add Todo
-        </button>
-      </form>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        {TodosStore.todos.map((item: ITodo) => (
-          <div key={item.id}>{item.title}</div>
-        ))}
-      </div>
-    </>
-  );
+	return (
+		<React.Fragment>
+			<TodoModal isOpen={isOpenModal} onChangeHanlder={setIsOpenModal} />
+			<IconButton
+				size='medium'
+				style={{
+					position: 'absolute',
+					bottom: '45px',
+					right: '45px',
+					margin: 0,
+					padding: 0,
+					backgroundColor: 'red',
+				}}
+				onClick={() => setIsOpenModal(true)}>
+				<AddIcon />
+			</IconButton>
+			<TodosList />
+		</React.Fragment>
+	);
 });

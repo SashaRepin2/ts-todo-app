@@ -1,0 +1,54 @@
+@import '~normalize.css/normalize.css';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+		sans-serif;
+}
+
+*,
+html * {
+	scrollbar-width: thin;
+	scrollbar-color: blue orange;
+}
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+	position: absolute;
+	height: 12px;
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+	background: rgba(34, 34, 119, 0.75);
+}
+
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+	background-color: rgba(50, 50, 70, 0.5);
+	border-radius: 5px;
+	border: 0px solid rgba(53, 53, 63, 0.5);
+}
+
+body {
+	background: linear-gradient(90deg, rgb(194, 185, 255) 0%, rgba(100, 115, 255, 1) 100%);
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	width: 520px;
+	min-height: 600px;
+	background-color: rgba(22, 26, 43, 0.8);
+	text-align: center;
+	margin: 128px auto;
+	border-radius: 10px;
+
+	overflow: hidden;
+}

@@ -1,1 +1,1 @@
-// type Complete = '' | '1'
+// type Complete = 'complete' | 'incomplete'
