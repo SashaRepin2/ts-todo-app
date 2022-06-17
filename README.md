@@ -1,3 +1,7 @@
+# Description
+Todos App ( React + TS + MobX + MUI + ... )
+For install packages `npm i`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
