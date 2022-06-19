@@ -22,12 +22,12 @@ export const RootModal: React.FC<ModalProps> = ({ title, children, open, onClose
 				aria-labelledby='modal-modal-title'
 				aria-describedby='modal-modal-description'>
 				<Box className={styles.modal}>
-					<Typography id='modal-modal-title' variant='h6' component='h2'>
+					<Typography className={styles.title} id='modal-modal-title' variant='h6' component='h2'>
 						{title || 'Заголовок'}
 					</Typography>
-					<Typography id='modal-modal-description' sx={{ mt: 2 }}>
+					<Box className={styles.content} id='modal-modal-description'>
 						{children}
-					</Typography>
+					</Box>
 				</Box>
 			</Modal>
 		</div>

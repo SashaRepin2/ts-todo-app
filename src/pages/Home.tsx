@@ -12,14 +12,15 @@ export const Home: React.FC = observer(() => {
 		<React.Fragment>
 			<TodoModal isOpen={isOpenModal} onChangeHanlder={setIsOpenModal} />
 			<IconButton
-				size='medium'
+				size='large'
 				style={{
 					position: 'absolute',
 					bottom: '45px',
 					right: '45px',
 					margin: 0,
-					padding: 0,
-					backgroundColor: 'red',
+					padding: '15px',
+					backgroundColor: 'blue',
+					color: '#fff',
 				}}
 				onClick={() => setIsOpenModal(true)}>
 				<AddIcon />

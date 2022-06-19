@@ -12,11 +12,14 @@
 		background-color: #6b6bfd;
 		color: #ffffff;
 		padding: 10px 20px;
+
+		.bar {
+		}
 	}
 	.list {
 		display: flex;
 		flex-direction: column;
-		padding: 0 20px;
+		padding: 10px 20px;
 	}
 
 	.hint {
